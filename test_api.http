@@ -1,0 +1,151 @@
+POST http://127.0.0.19:10019/users/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "ivan",
+  "password": "P@ssw0rd",
+  "role": "user"
+}
+
+###
+
+POST http://127.0.0.19:10019/users/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "viktor",
+  "password": "poiuytrewq",
+  "role": "admin"
+}
+
+###
+
+POST http://127.0.0.19:10019/auth/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "ivan",
+  "password": "P@ssw0rd"
+}
+###
+
+POST http://127.0.0.19:10019/auth/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "viktor",
+  "password": "poiuytrewq"
+}
+###
+
+PUT http://127.0.0.19:10019/auth/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Iml2YW4iLCJyb2xlIjoidXNlciIsImV4cCI6MTcwODUwNDAwNH0.hbpNcgwPwEupKouCG5eB_j9ISfQhzKxpZCi6r-h4SVE"
+}
+
+###
+
+GET http://127.0.0.19:10019/movies/
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Iml2YW4iLCJyb2xlIjoidXNlciIsImV4cCI6MTY3NzQwMzYwNH0.CQtMR4UQypW0Y76YpmdYr09XjBqwuDASQAhqxkQFF0Y
+
+###
+
+GET http://127.0.0.19:10019/movies/1
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Iml2YW4iLCJyb2xlIjoidXNlciIsImV4cCI6MTY3NzQwMzYwNH0.CQtMR4UQypW0Y76YpmdYr09XjBqwuDASQAhqxkQFF0Y
+
+###
+
+GET http://127.0.0.19:10019/movies/?genre_id=4
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Iml2YW4iLCJyb2xlIjoidXNlciIsImV4cCI6MTY3NzQwMzYwNH0.CQtMR4UQypW0Y76YpmdYr09XjBqwuDASQAhqxkQFF0Y
+
+###
+
+GET http://127.0.0.19:10019/movies/?year=1980
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Iml2YW4iLCJyb2xlIjoidXNlciIsImV4cCI6MTY3NzQwMzYwNH0.CQtMR4UQypW0Y76YpmdYr09XjBqwuDASQAhqxkQFF0Y
+
+###
+
+GET http://127.0.0.19:10019/directors/
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Iml2YW4iLCJyb2xlIjoidXNlciIsImV4cCI6MTY3NzQwMzYwNH0.CQtMR4UQypW0Y76YpmdYr09XjBqwuDASQAhqxkQFF0Y
+
+###
+
+GET http://127.0.0.19:10019/directors/2
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Iml2YW4iLCJyb2xlIjoidXNlciIsImV4cCI6MTY3NzQwMzYwNH0.CQtMR4UQypW0Y76YpmdYr09XjBqwuDASQAhqxkQFF0Y
+
+###
+
+GET http://127.0.0.19:10019/genres/
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Iml2YW4iLCJyb2xlIjoidXNlciIsImV4cCI6MTY3NzQwMzYwNH0.CQtMR4UQypW0Y76YpmdYr09XjBqwuDASQAhqxkQFF0Y
+
+###
+
+GET http://127.0.0.19:10019/genres/1
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Iml2YW4iLCJyb2xlIjoidXNlciIsImV4cCI6MTY3NzQwMzYwNH0.CQtMR4UQypW0Y76YpmdYr09XjBqwuDASQAhqxkQFF0Y
+
+###
+
+GET http://127.0.0.19:10019/movies/55
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Iml2YW4iLCJyb2xlIjoidXNlciIsImV4cCI6MTY3NzQwMzYwNH0.CQtMR4UQypW0Y76YpmdYr09XjBqwuDASQAhqxkQFF0Y
+
+###
+
+POST http://127.0.0.19:10019/movies/
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZpa3RvciIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTY3NzQwMzc1M30.CWsxVnr5LihwPiUZkeE7uTz2izqNDBl8Et6aQHkXPe0
+
+{
+  "title": "Гарри Поттер мой кумир!",
+  "trailer": "таким фильмам не нужны трейлеры",
+  "year": 1990,
+  "rating": 10,
+  "description": "10 из 10!"
+}
+
+###
+
+PUT http://127.0.0.19:10019/movies/55
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZpa3RvciIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTY3NzQwMzc1M30.CWsxVnr5LihwPiUZkeE7uTz2izqNDBl8Et6aQHkXPe0
+
+{
+  "id": 55,
+  "title": "-------",
+  "trailer": "-----",
+  "year": 0,
+  "rating": 0,
+  "description": "0 из 10!",
+  "genre_id": 1,
+  "director_id": 1
+}
+
+###
+
+DELETE http://127.0.0.19:10019/movies/55
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZpa3RvciIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTY3NzQwMzc1M30.CWsxVnr5LihwPiUZkeE7uTz2izqNDBl8Et6aQHkXPe0
+
+###
+
+DELETE http://127.0.0.19:10019/users/13
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZpa3RvciIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTY3NzQwMzc1M30.CWsxVnr5LihwPiUZkeE7uTz2izqNDBl8Et6aQHkXPe0
+
+###
